@@ -1,6 +1,6 @@
 ﻿using Catalog.Core.Entities;
 
-namespace CatalogAPI.Repositories
+namespace Catalog.Core.Repositories
 {
     public interface IBrandRepository
     {

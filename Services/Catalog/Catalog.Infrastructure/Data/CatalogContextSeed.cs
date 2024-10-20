@@ -1,6 +1,6 @@
-﻿using CatalogAPI.Entities;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using System.Text.Json;
+using Catalog.Core.Entities;
 
 namespace Catalog.Infrastructure.Data
 {
@@ -24,4 +24,4 @@ namespace Catalog.Infrastructure.Data
             }
         }
     }
-}
+} 
