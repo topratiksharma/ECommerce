@@ -1,8 +1,6 @@
 ﻿using System.Text.Json;
 using MongoDB.Driver;
 using CatalogAPI.Entities;
-using MongoDB.Bson;
-using MongoDB.Bson.IO;
 
 namespace Catalog.Infrastructure.Data
 {
