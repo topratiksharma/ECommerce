@@ -1,41 +1,59 @@
 ﻿using Catalog.Core.Entities;
 using Catalog.Core.Repositories;
+using Catalog.Infrastructure.Data;
 
 namespace Catalog.Infrastructure.Repositories
 {
-    public class ProductRepositories: IProductRepository
+    public class ProductRepositories: IProductRepository, IBrandRepository, ITypeRepository
     {
-        public Task<IEnumerable<Product>> GetProducts()
+        public ICatalogContext _context;
+
+        public ProductRepositories(ICatalogContext context)
+        {
+            _context = context;
+        }
+
+        Task<Product> IProductRepository.CreateProduct(Product product)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Product> GetProduct(string id)
+        Task<bool> IProductRepository.DeleteProduct(string id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Product> GetProductByName(string name)
+        Task<IEnumerable<ProductType>> ITypeRepository.GetAllTypes()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Product> GetProductByBrand(string brandName)
+        Task<IEnumerable<ProductBrand>> IBrandRepository.GetBrands()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Product> CreateProduct(Product product)
+        Task<Product> IProductRepository.GetProduct(string id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateProduct(Product product)
+        Task<Product> IProductRepository.GetProductByBrand(string brandName)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteProduct(string id)
+        Task<Product> IProductRepository.GetProductByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IEnumerable<Product>> IProductRepository.GetProducts()
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<bool> IProductRepository.UpdateProduct(Product product)
         {
             throw new NotImplementedException();
         }
